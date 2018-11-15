@@ -40,9 +40,11 @@ var dog = {
     age: 7,
     vegetarian: true,
     color: ['Brown','Black'],
-    speak: 'bark!'
-}
-console.log("My dog " + dog.name + " is " + dog.age + " years old and likes to " + dog.speak + " at strangers.");
+    speak: function(){
+        return 'bark!';
+    }
+};
+console.log("My dog " + dog.name + " is " + dog.age + " years old and likes to " + dog.speak() + " at strangers.");
 
 
 
@@ -60,6 +62,18 @@ console.log("My dog " + dog.name + " is " + dog.age + " years old and likes to "
             
   Console.log the object.
 */
+var kicks = {};
+
+kicks.brand = 'Converse';
+kicks.color = 'cornflower blue';
+kicks.size = 10;
+kicks.price = 75;
+kicks.buy = function(){
+    return "Now I is a cool kid!";
+}
+
+console.log(kicks);
+console.log(kicks.buy);
 
 /* 
 
