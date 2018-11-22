@@ -73,7 +73,6 @@ kicks.buy = function(){
 }
 
 console.log(kicks);
-console.log(kicks.buy);
 
 /* 
 
@@ -85,7 +84,13 @@ console.log(kicks.buy);
 
   console.log the object
 */
+var plainBox = {};
 
+plainBox.color = 'red';
+plainBox.size = 10;
+plainBox.contents = [];
+
+console.log(plainBox);
 
 /*
 5. Declare a variable named `stockCar` and create the following properties (key-value pairs) to the object:
@@ -97,8 +102,15 @@ console.log(kicks.buy);
 
     console.log the object
 */
+var stockCar = {
+    model: 'Ford',
+    year: 2000,
+    automaticTransmission: false,
+    driver: null,
+    passengers: [],
+}
 
-
+console.log(stockCar);
 /*
 
 6. Add new property inside a function
@@ -115,7 +127,17 @@ console.log(kicks.buy);
    the return value in a variable named `completePerson`. Use `console.log` three times to print the entire object, just 
    the value at `name`, and just the value at `age`.
  */
+var plainPerson = {};
 
+function buildPerson(person,nameString,age){
+    person.name = nameString;
+    person.age = age;
+
+    return person;
+}
+var completePerson = buildPerson(plainPerson,'Roland',22);
+console.log(completePerson);
+console.log(plainPerson);
 
 /*
 7. Display values of objects that are inside an array
